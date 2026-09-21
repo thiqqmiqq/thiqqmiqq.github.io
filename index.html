@@ -1,1 +1,234 @@
-Gibberish for now
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mollydrumm.com</title>
+
+
+
+    <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #8E4536;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #ECDFC3;
+        }
+
+        header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: #8E4536;
+                    z-index: 1000;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 0;
+            user-select: none;
+            background: none;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+       
+
+        h1 a {
+            color: inherit;
+            text-decoration: none;
+            background: none;
+            user-select: none;
+        }
+       
+
+        h1:hover {
+            transform: scale(1.1);
+        }
+       
+
+        h1 a:hover {
+            text-decoration: none;
+            background: none;
+        }
+
+        h1 a:active {
+            color: #ffce89;
+        }
+
+        nav a {
+            font-size: 30px;
+            color: #ECDFC3;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 10px 14px;
+        }
+
+        nav a:hover {
+            background-color: #6A3328;
+        }
+
+        nav a:last-child {
+            margin-right: 40px;
+        }
+
+        .nav-link.active {
+            background-color: #8E4536;
+            color: #ECDFC3;
+        }
+
+        .underline {
+            text-decoration: none;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: #ECDFC3;
+            background-color: #8E4536;
+            padding: 10px 14px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            margin-right: 10px;
+        }
+
+        .content-box {
+            background-color: #ECDFC3;
+            border-top: 7px solid #6A3328;
+            border-right: 7px solid #6A3328;
+            border-bottom: 7px solid #6A3328;
+            border-left: 7px solid #6A3328;
+            border-radius: 30px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 66.666%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .arrow-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .arrow-container img {
+            margin: 0 20px;
+            border-radius: 30px;
+        }
+
+        .content-box-text {
+            text-align: justify;
+            font-size: 20px;
+            color: #6A3328;
+            margin-top: 10px;
+        }
+
+        .content-box h2 {
+            font-size: 24px;
+            color: #6A3328;
+            margin-bottom: 10px;
+        }
+
+        .content-box-text p {
+            text-align: justify;
+            font-size: 20px;
+            color: #6A3328;
+            text-indent: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 250px;
+            border-radius: 30px;
+        }
+
+        .top-box {
+            text-align: center;
+            background-color: #6A3328;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin: 120px auto 20px auto;
+            width: fit-content;
+        }
+
+        .top-box h2 {
+            font-size: 36px;
+            color: #ECDFC3;
+            margin: 0;
+        }
+       
+        .content-box-text a {
+            color: #6A3328;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <div class="header-content">
+                <h1><a href="http://mollydrumm.com">mollydrumm.com</a></h1>
+                <img src="pixil-frame-0.png" alt="self portrait" width="32">
+            </div>
+            <nav>
+                <a href="http://mollydrumm.com/#about-section">about</a>
+                <a href="http://mollydrumm.com/#projects-section">projects</a>
+                <a href="http://mollydrumm.com/#experience-section">experience</a>
+                <a href="http://mollydrumm.com/#education-section">education</a>
+                <a href="http://mollydrumm.com/#resume-section">resume</a>
+            </nav>
+    </header>
+
+   <div class="top-box">
+        <h2>Bloodsport Battlebots CFD Simulation</h2>
+    </div>
+
+    <div class="content-box">
+
+        <div class="image-container">
+            <img src="bloodsport.jpeg" alt="Bloodsport Image">
+            <img src="pressure_contours.png" alt="Pressure Contours Image">
+        </div>
+
+        <div class="content-box-text">
+            <p>
+                The Battlebots team Bloodsport reached out to me and asked for ways to reduce the aerodynamic loading on their weapon motor when their weapon blade was spinning. I ran a CFD sim using ANSYS Fluent on the original set up and found that the loading from the drag was a very similar number to the loading reported by the team's data. I then put a chamfer on the sides of the blades and ran the sim again and this was able to reduce the loading by about half with a solution that should be easy to manufacture.
+            </p>
+        </div>
+
+        <div class="arrow-container">
+            <img src="CFD_old.jpg" alt="cfd old" width="350">
+            <img src="arrow-right.png" alt="Arrow Right" width="50">
+            <img src="CFD_new.jpg" alt="cfd new" width="350">
+        </div>
+    </div>
+
+
+
+</body>
+</html>
