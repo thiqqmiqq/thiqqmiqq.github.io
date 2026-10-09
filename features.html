@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>thiqq zone plus+</title>
 
-
-
     <link rel="icon" type="image/png" href="pixil-frame-0.png">
 
-    
-      <style>
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -24,12 +21,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            top: 0;
-            left: 0;
             width: 100%;
             background-color: #0a6d72;
             z-index: 1000;
             box-sizing: border-box;
+            flex-wrap: wrap; /* Allows nav to wrap smoothly on smaller screens */
+            gap: 15px;
         }
 
         h1 {
@@ -61,21 +58,24 @@
             color: #ffce89;
         }
 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
         nav a {
-            font-size: 30px;
+            font-size: 20px; /* Scaled slightly down from 30px for better fit */
             color: #FFFFFF;
             text-decoration: none;
-            margin: 0 5px;
+            margin: 5px;
             transition: background-color 0.3s, color 0.3s;
-            padding: 10px 14px;
+            padding: 8px 12px;
+            border-radius: 6px;
         }
 
         nav a:hover {
             background-color: #2f3699;
-        }
-
-        nav a:last-child {
-            margin-right: 40px;
         }
 
         .nav-link.active {
@@ -103,19 +103,18 @@
 
         .content-box {
             background-color: #FFFFFF;
-            border-top: 7px solid #2f3699;
-            border-right: 7px solid #2f3699;
-            border-bottom: 7px solid #2f3699;
-            border-left: 7px solid #2f3699;
+            border: 7px solid #2f3699;
             border-radius: 30px;
             padding: 20px;
             margin: 20px auto;
-            width: 66.666%;
+            width: 85%;
+            max-width: 900px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            box-sizing: border-box;
         }
 
         .arrow-container {
@@ -151,27 +150,29 @@
             margin-left: 20px;
         }
 
-
         .image-container {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
             margin: 20px 0;
+            flex-wrap: wrap;
         }
 
         .image-container img {
-            width: 300px;
-            height: 250px;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             border-radius: 30px;
         }
 
+        /* Reduced top margin to move title and boxes higher up */
         .top-box {
             text-align: center;
             background-color: #2f3699;
             border-radius: 30px;
             padding: 10px 20px;
-            margin: 120px auto 20px auto;
+            margin: 30px auto 20px auto; 
             width: fit-content;
         }
 
@@ -180,23 +181,21 @@
             color: #FFFFFF;
             margin: 0;
         }
-       
+        
         .content-box-text a {
             color: #2f3699;
             text-decoration: underline;
         }
 
-
-         .content-box-2 {
+        .content-box-2 {
             background-color: #292f85;
-            border-top: 4px solid #FFFFFF;
-            border-right: 4px solid #FFFFFF;
-            border-bottom: 4px solid #FFFFFF;
-            border-left: 4px solid #FFFFFF;
+            border: 4px solid #FFFFFF;
             border-radius: 30px;
             padding: 20px;
             margin: 20px auto;
-            width: 66.666%;
+            width: 85%;
+            max-width: 900px;
+            box-sizing: border-box;
             overflow: hidden;
             display: flex;
             flex-direction: row-reverse;
@@ -207,33 +206,37 @@
         }
 
         .content-box-2:hover {
-            transform: scale(1.1);
+            transform: scale(1.03); /* Scaled down slightly so it doesn't overflow mobile screens on hover */
         }
 
         .content-box-2 img {
             border-radius: 30px;
             width: 200px;
+            height: auto;
             margin-left: 20px;
+            object-fit: cover;
         }
 
         .content-box-2-text {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            margin-right: 40px;
-            margin-left: 40px;
+            margin-right: 20px;
+            margin-left: 20px;
         }
 
         .content-box-2 h2 {
             font-size: 24px;
             color: #FFFFFF;
             margin-bottom: 10px;
+            margin-top: 0;
         }
 
         .content-box-2 p {
             text-align: justify;
-            font-size: 20px;
+            font-size: 18px;
             color: #FFFFFF;
+            margin: 0;
         }
 
         .projects-box {
@@ -241,10 +244,9 @@
             border-radius: 30px;
             padding: 10px 20px;
             margin: 20px auto;
-            display: inline-block;
+            display: block;
             text-align: center;
-            position: relative;
-            left: calc(16.666%);
+            width: fit-content;
         }
 
         .projects-box h2 {
@@ -253,30 +255,71 @@
             margin: 0;
         }
 
+        /* Mobile & Small Screen Optimizations */
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+
+            .top-box h2 {
+                font-size: 28px;
+            }
+
+            .content-box-2 {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .content-box-2 img {
+                margin-left: 0;
+                margin-bottom: 15px;
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .content-box-2-text {
+                margin: 0;
+            }
+
+            .content-box-2 p {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-            <div class="header-content">
-                <h1><a href="http://thiqqmiqq.org">thiqqmiqq.org</a></h1>
-                <img src="pixil-frame-0.png" alt="uh oh! looks like we went poop mode" width="32">
-            </div>
-            <nav>
-                <a href="http://thiqqmiqq.org/features" class="nav-link active">Featured Artists</a>
-                <a href="https://open.spotify.com/artist/6qA5rtMEyUaly7jssT28gB" target="_blank">Spotify</a>
-                <a href="http://thiqqmiqq.redbubble.com" target="_blank">Merch</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Nudes</a>
-                <a href="https://www.instagram.com/thiqqmiqq/" target="_blank">Instagram Logo</a>
-                <a href="http://thiqqmiqq.org/wahhoo">Donate</a>
-            </nav>
+        <div class="header-content">
+            <h1><a href="http://thiqqmiqq.org">thiqqmiqq.org</a></h1>
+            <img src="pixil-frame-0.png" alt="uh oh! looks like we went poop mode" width="32">
+        </div>
+        <nav>
+            <a href="http://thiqqmiqq.org/features" class="nav-link active">Featured Artists</a>
+            <a href="https://open.spotify.com/artist/6qA5rtMEyUaly7jssT28gB" target="_blank">Spotify</a>
+            <a href="http://thiqqmiqq.redbubble.com" target="_blank">Merch</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Nudes</a>
+            <a href="https://www.instagram.com/thiqqmiqq/" target="_blank">Instagram Logo</a>
+            <a href="http://thiqqmiqq.org/wahhoo">Donate</a>
+        </nav>
     </header>
 
-   <div class="top-box">
+    <div class="top-box">
         <h2>Featured Artists</h2>
     </div>
 
     <a href="/slipperyal" class="content-box-2">
-        <img src="slippery_al.jpeg" alt="image of slippery al" width="200">
+        <img src="slippery_al.jpeg" alt="image of slippery al">
         <div class="content-box-2-text">
             <h2>Slippery Al</h2>
             <p>
@@ -286,7 +329,7 @@
     </a>
 
     <a href="/babyfrank" class="content-box-2">
-        <img src="baby_frank.jpeg" alt="image of baby frank" width="200">
+        <img src="baby_frank.jpeg" alt="image of baby frank">
         <div class="content-box-2-text">
             <h2>Baby Frank</h2>
             <p>
@@ -294,10 +337,5 @@
             </p>
         </div>
     </a>
-
-   
-
-
-
 </body>
 </html>
