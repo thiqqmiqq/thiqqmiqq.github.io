@@ -25,7 +25,7 @@
             background-color: #0a6d72;
             z-index: 1000;
             box-sizing: border-box;
-            flex-wrap: wrap; /* Allows nav to wrap smoothly on smaller screens */
+            flex-wrap: wrap;
             gap: 15px;
         }
 
@@ -65,7 +65,7 @@
         }
 
         nav a {
-            font-size: 20px; /* Scaled slightly down from 30px for better fit */
+            font-size: 20px;
             color: #FFFFFF;
             text-decoration: none;
             margin: 5px;
@@ -78,8 +78,9 @@
             background-color: #2f3699;
         }
 
+        /* Updated active tab to darker blue */
         .nav-link.active {
-            background-color: #292f85;
+            background-color: #1b1f5e;
             color: #FFFFFF;
         }
 
@@ -88,7 +89,7 @@
             font-family: 'Trebuchet MS', sans-serif;
             font-size: 30px;
             color: #FFFFFF;
-            background-color: #292f85;
+            background-color: #1b1f5e;
             padding: 10px 14px;
         }
 
@@ -166,7 +167,6 @@
             border-radius: 30px;
         }
 
-        /* Reduced top margin to move title and boxes higher up */
         .top-box {
             text-align: center;
             background-color: #2f3699;
@@ -187,8 +187,9 @@
             text-decoration: underline;
         }
 
+        /* Updated content-box-2 background to match active nav link (#1b1f5e) */
         .content-box-2 {
-            background-color: #292f85;
+            background-color: #1b1f5e;
             border: 4px solid #FFFFFF;
             border-radius: 30px;
             padding: 20px;
@@ -201,12 +202,13 @@
             flex-direction: row-reverse;
             align-items: center;
             justify-content: space-between;
-            transition: transform 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
             text-decoration: none;
         }
 
         .content-box-2:hover {
-            transform: scale(1.03); /* Scaled down slightly so it doesn't overflow mobile screens on hover */
+            transform: scale(1.03);
+            background-color: #24297a; /* Slightly brighter dark blue on hover */
         }
 
         .content-box-2 img {
