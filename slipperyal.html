@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Al, Slippery</title>
 
-
-
     <link rel="icon" type="image/png" href="pixil-frame-0.png">
 
-      <style>
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -23,12 +21,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            top: 0;
-            left: 0;
             width: 100%;
             background-color: #0a6d72;
             z-index: 1000;
             box-sizing: border-box;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         h1 {
@@ -60,21 +58,24 @@
             color: #ffce89;
         }
 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
         nav a {
-            font-size: 30px;
+            font-size: 20px;
             color: #FFFFFF;
             text-decoration: none;
-            margin: 0 5px;
+            margin: 5px;
             transition: background-color 0.3s, color 0.3s;
-            padding: 10px 14px;
+            padding: 8px 12px;
+            border-radius: 6px;
         }
 
         nav a:hover {
             background-color: #2f3699;
-        }
-
-        nav a:last-child {
-            margin-right: 40px;
         }
 
         .nav-link.active {
@@ -102,19 +103,18 @@
 
         .content-box {
             background-color: #FFFFFF;
-            border-top: 7px solid #2f3699;
-            border-right: 7px solid #2f3699;
-            border-bottom: 7px solid #2f3699;
-            border-left: 7px solid #2f3699;
+            border: 7px solid #2f3699;
             padding: 20px;
             margin: 20px auto;
-            width: 75%;
+            width: 85%;
+            max-width: 900px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
+            border-radius: 30px;
         }
 
         .arrow-container {
@@ -153,14 +153,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 20px;
             width: 100%;
             margin: 20px 0 10px 0;
+            flex-wrap: wrap;
         }
 
         .image-container img {
-            width: 90%;
+            width: 100%;
+            max-width: 380px;
             height: auto;
             display: block;
+            border-radius: 20px;
         }
 
         .top-box {
@@ -168,7 +172,7 @@
             background-color: #2f3699;
             border-radius: 30px;
             padding: 10px 20px;
-            margin: 120px auto 20px auto;
+            margin: 30px auto 20px auto;
             width: fit-content;
         }
 
@@ -182,30 +186,62 @@
             color: #2f3699;
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+
+            .top-box h2 {
+                font-size: 28px;
+            }
+
+            .content-box {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .content-box-text p {
+                font-size: 16px;
+            }
+
+            .image-container img {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-            <div class="header-content">
-                <h1><a href="http://thiqqmiqq.org">thiqqmiqq.org</a></h1>
-                <img src="pixil-frame-0.png" alt="uh oh! looks like we went poop mode" width="32">
-            </div>
-            <nav>
-                <a href="http://thiqqmiqq.org/features">Featured Artists</a>
-                <a href="https://open.spotify.com/artist/6qA5rtMEyUaly7jssT28gB" target="_blank">Spotify</a>
-                <a href="http://thiqqmiqq.redbubble.com" target="_blank">Merch</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Nudes</a>
-                <a href="https://www.instagram.com/thiqqmiqq/" target="_blank">Instagram Logo</a>
-                <a href="http://thiqqmiqq.org/wahhoo">Donate</a>
-            </nav>
+        <div class="header-content">
+            <h1><a href="http://thiqqmiqq.org">thiqqmiqq.org</a></h1>
+            <img src="pixil-frame-0.png" alt="uh oh! looks like we went poop mode" width="32">
+        </div>
+        <nav>
+            <a href="http://thiqqmiqq.org/features">Featured Artists</a>
+            <a href="https://open.spotify.com/artist/6qA5rtMEyUaly7jssT28gB" target="_blank">Spotify</a>
+            <a href="http://thiqqmiqq.redbubble.com" target="_blank">Merch</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Nudes</a>
+            <a href="https://www.instagram.com/thiqqmiqq/" target="_blank">Instagram Logo</a>
+            <a href="http://thiqqmiqq.org/wahhoo">Donate</a>
+        </nav>
     </header>
 
-   <div class="top-box">
+    <div class="top-box">
         <h2>Slippery Al</h2>
     </div>
 
     <div class="content-box">
-
         <div class="image-container">
             <img src="insert_image1.jpeg" alt="insert image 1">
             <img src="insert_image2.jpeg" alt="insert image 2">
@@ -216,10 +252,6 @@
                 who is he
             </p>
         </div>
-
     </div>
-
-
-
 </body>
 </html>
